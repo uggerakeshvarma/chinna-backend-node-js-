@@ -8,14 +8,16 @@ const Firmrouter = require('./Router/FirmRoutes')
 const productRoute = require('./Router/productRoute');
 const path = require('path')
 
+
 const app = express();
 const VenderRote = require('./Router/VendoerRoute');
 
 
 
-app.use(cors());
+
 app.use(bodyParser.json());
 DOTENV.config()
+app.use(cors());
 mongoose.connect(process.env.MongoDB_URL)
   .then(() => {
     console.log("MongoDB is Connected");

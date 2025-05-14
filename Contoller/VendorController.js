@@ -13,7 +13,7 @@ const vendorRegister = async (req, res) => {
     const { UserName, Email, Password } = req.body;
 
     try {
-        const existingVendor = await Vendor.findOne({ Email });
+        const existingVendor = await Vendor.findOne({ Email })
         if (existingVendor) {
             return res.status(400).json({ Message: "Email already used" });
         }

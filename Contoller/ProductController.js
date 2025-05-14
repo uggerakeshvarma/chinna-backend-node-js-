@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Firm = require('../Module/Firm')
 const multer = require('multer');
 const Product = require('../Module/Product');
+const path = require('path')
 
 
 const storage = multer.diskStorage({
